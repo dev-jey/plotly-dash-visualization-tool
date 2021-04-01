@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Data Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Django data analysis tool" name="description" />
+    <meta content="DevJey" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+
+    <!-- Bootstrap Css -->
+    <link
+      href="{% static 'css/bootstrap.min.css' %}"
+      id="bootstrap-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Icons Css -->
+    <link
+      href="{% static 'css/icons.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- App Css-->
+    <link
+      href="{% static 'css/app.min.css' %}"
+      id="app-style"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+
+  <body data-layout="horizontal" data-topbar="colored">
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+      <div class="main-content">
+        {% block mainblock %}
+
+        <!--
+        Main app content
+    -->
+
+        {% endblock %}
+
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                © DevJey.
+              </div>
+              <div class="col-sm-6">
+                <div class="text-sm-end d-none d-sm-block">
+                  Crafted with <i class="mdi mdi-heart text-danger"></i> by
+                  <a
+                    href="https://devjey.com"
+                    target="_blank"
+                    class="text-reset"
+                    >DevJey</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <!-- end main content-->
+    </div>
+    <!-- END layout-wrapper -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- JAVASCRIPT -->
+    <script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'libs/metismenu/metisMenu.min.js' %}"></script>
+    <script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+    <script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+    <script src="{% static 'libs/waypoints/lib/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'libs/jquery.counterup/jquery.counterup.min.js' %}"></script>
+
+    <!-- apexcharts -->
+    <script src="{% static 'libs/apexcharts/apexcharts.min.js' %}"></script>
+
+    <script src="{% static 'js/pages/dashboard.init.js' %}"></script>
+
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
