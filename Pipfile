@@ -6,6 +6,15 @@ name = "pypi"
 [packages]
 django = "*"
 pandas = "*"
+dash = "*"
+django-plotly-dash = "*"
+channels = "*"
+daphne = "*"
+redis = "*"
+django-redis = "*"
+channels-redis = "*"
+lxml = "*"
+dash-renderer = "*"
 
 [dev-packages]
 

@@ -1,12 +1,10 @@
-{% extends 'base.html' %} {% load static %} {% block mainblock %}
-<header id="page-topbar">
-  {% include 'components/menubar.html' %} {% include 'components/navbar.html' %}
-</header>
+{% extends 'base.html' %} {% load plotly_dash %} {% load static %}
 
 <!-- ============================================================== -->
 <!-- Start right Content here -->
 <!-- ============================================================== -->
 
+{% block mainblock %}
 <div class="page-content">
   <div class="container-fluid">
     {% include 'components/general_stats.html' %}
@@ -40,8 +38,16 @@
                 </div>
               </div>
             </div>
-            <h4 class="card-title mb-4">Sales Analytics</h4>
 
+            <div class="container mt-5">
+              <div
+                class="card"
+                style="border: 0; margin: 0; background-color: #f8f9fc"
+              >
+                {% plotly_app name='MyApp' ratio=0.68 %}
+              </div>
+            </div>
+            <h4 class="card-title mb-4">Sales Analytics</h4>
             <div class="mt-1">
               <ul class="list-inline main-chart mb-0">
                 <li class="list-inline-item chart-border-left me-0 border-0">
@@ -1008,5 +1014,4 @@
   <!-- container-fluid -->
 </div>
 <!-- End Page-content -->
-
 {% endblock %}

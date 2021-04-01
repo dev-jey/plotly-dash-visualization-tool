@@ -36,6 +36,10 @@
     <!-- Begin page -->
     <div id="layout-wrapper">
       <div class="main-content">
+        <header id="page-topbar">
+          {% include 'components/menubar.html' %} 
+          {% include 'components/navbar.html' %}
+        </header>
         {% block mainblock %}
 
         <!--
